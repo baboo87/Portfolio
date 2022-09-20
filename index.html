@@ -1,0 +1,89 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/regular.min.css" integrity="sha512-aNH2ILn88yXgp/1dcFPt2/EkSNc03f9HBFX0rqX3Kw37+vjipi1pK3L9W08TZLhMg4Slk810sPLdJlNIjwygFw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/fontawesome.min.css" integrity="sha512-RvQxwf+3zJuNwl4e0sZjQeX7kUa3o82bDETpgVCH2RiwYSZVDdFJ7N/woNigN/ldyOOoKw8584jM4plQdt8bhA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    <div class="container"> 
+    <div class="product-card">
+        <div class="logo-cart">
+            <div class="back">
+                <i class="fa-solid fa-chevron-left"></i>
+                <span>zurrück</span>
+                
+            </div>
+             <i class="fa fa-cart-shopping"></i>
+        </div>
+        <div class="main-images">
+            <img id="weiss" class="weiss active" src="./assets/white.png" alt= "">
+            <img id="rot" class="rot" src="./assets/red.png" alt="">
+            <img id="gruen" class="gruen" src="./assets/green.png" alt="" >
+            <img id="schwarz" class="schwarz" src="./assets/black.png" alt="">
+        </div>
+        <div class="shows-details">
+            <span class="shows_name">Nike Air Force 1 &reg;</span>
+        </div>
+        <div class="color-preis">
+            <div class="color-option">
+                <span class="color">farbe</span>
+                <div class="circles">
+                    <span class="circle weiss active" id="weiss"></span>
+                    <span class="circle rot" id="rot"></span>
+                    <span class="circle gruen" id="gruen"></span>
+                    <span class="circle schwarz" id="schwarz"></span>
+                </div>
+            </div>
+            <div class="preis">
+                <span class="preis_num">180$</span>
+            </div>
+        </div>
+        <div class="btn-kaufen" >
+            <button>zum Warenkorb</button>
+        </div>
+        </div>
+
+      
+
+
+    </div>
+
+   
+   
+
+    
+
+    <script>
+
+      let circle =  document.querySelector(" .color-option");
+      
+      
+      circle.addEventListener("click", (e) => {
+        let target = e.target;
+        
+      
+	  if(target.classList.contains("circle")){
+	            circle.querySelector(".active").classList.remove("active");
+	            target.classList.add("active");
+	            document.querySelector(".main-images .active").classList.remove("active");
+	            document.querySelector(` .main-images .${target.id} `).classList.add("active");
+	        }});
+
+
+    
+     
+
+    </script>
+    
+</body>
+</html>
